@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<!-- We Can Declare this Tags in 3 ways-->
+<!-- 1 st Way-->
+         <bean class="com.example.Student" name="student1">
+            <property name="id">
+            <value>123</value>
+            </property>
+
+            <property name="subjectName">
+            <value>Physics</value>
+            </property>
+
+             <property name="address">
+            <value>Hydrabad</value>
+            </property> 
+         </bean>
+
+<!-- 2 nd Way  It is Customization Version of the Above one -->
+         <bean class="com.example.Student" name="student2">
+            <property name="id" value="456"/>
+
+            <property name="subjectName" value="Chemistry"/>
+
+             <property name="address" value="Chennai"/>
+         </bean>
+<!-- 3 nd Way By using the P schema Make sure we have to include the p schema inside the .xml    "http://www.springframework.org/schema/p"  -->
+
+         <bean class="com.example.Student" name="student3" p:id="678" p:subjectName="Maths" p:address="Pune"/>
+</beans>
+
+
